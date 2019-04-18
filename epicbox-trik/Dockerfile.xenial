@@ -30,6 +30,8 @@ RUN  apt-get install -y --no-install-recommends \
 
 RUN apt-get install -y libubsan0
 
+RUN apt-get install -y python3
+
 RUN apt-get clean all
 RUN locale-gen ru_RU.UTF-8 \
   && /bin/echo -e "/opt/qt56/lib/x86_64-linux-gnu\n/opt/qt56/lib\n" > /etc/ld.so.conf.d/zz_opt_qt.conf \
